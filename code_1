@@ -1,32 +1,9 @@
-import random
+# Program to print the multiplication table of 3
 
-def guess_the_number():
-    # Generate a random number between 1 and 10
-    number_to_guess = random.randint(1, 10)
-    attempts = 0
-    guessed = False
+def multiplication_table_of_3():
+    # Loop to generate the table
+    for i in range(1, 11):
+        print(f"3 x {i} = {3 * i}")
 
-    print("Welcome to the Guess the Number game!")
-    print("I have selected a number between 1 and 10. Can you guess it?")
-
-    while not guessed:
-        try:
-            # Get user input
-            guess = int(input("Enter your guess: "))
-            attempts += 1
-
-            # Check if the guess is correct
-            if guess < 1 or guess > 10:
-                print("Please guess a number between 1 and 10.")
-            elif guess < number_to_guess:
-                print("Too low! Try again.")
-            elif guess > number_to_guess:
-                print("Too high! Try again.")
-            else:
-                guessed = True
-                print(f"Congratulations! You've guessed the number {number_to_guess} in {attempts} attempts.")
-        except ValueError:
-            print("That's not a valid number. Please enter an integer between 1 and 10.")
-
-# Start the game
-guess_the_number()
+# Call the function
+multiplication_table_of_3()
